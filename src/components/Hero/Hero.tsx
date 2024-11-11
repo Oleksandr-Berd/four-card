@@ -1,6 +1,8 @@
+import * as SC from "./HeroStyled"
+
 const Hero:React.FC = () => {
     return (
-      <div>
+      <SC.HeroStyled>
         <h3>
           Reliable, efficient delivery <span>Powered by Technology</span>
         </h3>
@@ -8,7 +10,7 @@ const Hero:React.FC = () => {
           Our Artificial Intelligence powered tools use millions of project data
           points to ensure that your project is successful
         </p>
-      </div>
+      </SC.HeroStyled>
     );
 }
  
