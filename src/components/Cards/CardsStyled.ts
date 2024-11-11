@@ -10,6 +10,14 @@ export const CardList = styled.ul`
   & > li:not(:last-child) {
     margin-bottom: 24px;
   }
+
+  @media (min-width: 1220px) {
+    position: relative;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
 `;
 
 export const Card = styled.li`
@@ -33,6 +41,36 @@ export const Card = styled.li`
         : color === "orange"
         ? "#FDBF00"
         : "#00C8C8"};
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 1220px) {
+    &:nth-child(1) {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      transform: translateY(-70%);
+      grid-column: 1 / 2; /* First column */
+    }
+
+    &:nth-child(2) {
+      grid-column: 2 / 3; /* Second column, spans two columns */
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      transform: translateY(-70%);
+      grid-column: 3 / 4; /* Third column */
+    }
+
+    &:nth-child(4) {
+      grid-column: 2 / 3; /* Centered in the second column of the new row */
+    }
+  }
 `;
 
 export const CartTitle = styled.h4`
@@ -46,6 +84,10 @@ export const CardText = styled.p`
   font-size: 13px;
   line-height: 1.77;
   letter-spacing: 0.09px;
+
+  @media (min-width: 1220px){
+    margin-bottom: 40px;
+  }
 `;
 
 export const IconCon = styled.div`

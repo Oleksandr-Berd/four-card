@@ -8,7 +8,6 @@ export const HeroStyled = styled.div`
 
   background-color: #f2f2f2;
 
-
   & > h3 {
     margin-bottom: 16px;
 
@@ -28,5 +27,31 @@ export const HeroStyled = styled.div`
     line-height: 1.67;
     letter-spacing: 0.1px;
     color: #4d4f62;
+  }
+
+  @media (min-width: 1220px) {
+    text-align: center;
+
+    padding: 0;
+    padding-top: 80px;
+    padding-bottom: 64px;
+
+    & > h3 {
+      width: 445px;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 36px;
+      letter-spacing: 0.25px;
+    }
+
+    & > p {
+      width: 420px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 15px;
+    }
   }
 `;
